@@ -6,6 +6,7 @@ from flask import Flask, request, jsonify, render_template_string
 from flask_cors import CORS
 from geopy.distance import geodesic
 import math
+import os
 
 # Create the Flask app
 app = Flask(__name__)
@@ -371,7 +372,7 @@ def run_flask():
     app.run(port=5000, debug=False)
 
 if __name__ == "__main__":
-    root = tk.Tk()
+    root = tk.Tk() 
     app_instance = TSPSolver(root)
 
     # Run Flask app in a separate thread
